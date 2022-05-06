@@ -22,8 +22,6 @@ def restore_arp_table(destination_ip, source_ip):
 target_ip = "192.168.1.14"
 gateway_ip = "192.168.1.1"
 
-restore_arp_table(target_ip, gateway_ip)
-
 try:
     count = 0
     while True:
