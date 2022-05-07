@@ -26,5 +26,6 @@ def get_credentials_from_http(packet):
     for keyword in keywords:
         if keyword in load:
             return re.search("(?:')(.*?)'", str(load))[1]
+            # x = re.search(pattern, string)
 
 sniffer("wlp2s0")
