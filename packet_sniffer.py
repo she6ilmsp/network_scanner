@@ -14,7 +14,8 @@ def processing_sniffer(packet):
 
         if packet.haslayer(scapy.Raw):
             login_info = get_credentials_from_http(packet)
-            print("\n[+++] Possible credentials found..\n" + login_info + "\n")
+            if login_info:
+                print("\n[+++] Possible credentials found..\n" + login_info + "\n")
 
 def get_url(packet):
     binary_url = packet[http.HTTPRequest].Host + packet[http.HTTPRequest].Path
